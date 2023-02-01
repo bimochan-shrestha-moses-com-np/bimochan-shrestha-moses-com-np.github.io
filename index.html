@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Display Data</title>
+  </head>
+  <body>
+    <div id="dataContainer"></div>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const data = JSON.parse(decodeURIComponent(params.get("data")));
+
+      const dataContainer = document.getElementById("dataContainer");
+      dataContainer.innerHTML = `
+        <h1>${data.name}</h1>
+        <p>Age: ${data.age}</p>
+      `;
+    </script>
+    <h1>Bimochan Shrestha</h1>
+  </body>
+</html>
