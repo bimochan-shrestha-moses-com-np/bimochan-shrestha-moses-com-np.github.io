@@ -6,10 +6,11 @@
   <body>
     <script>
       const urlParams = new URLSearchParams(window.location.search);
-      const obj = urlParams.get("obj");
+      const name = urlParams.get("name");
+      const age = urlParams.get("age");
 
-      document.write(`Name: ${obj.name}`);
-      document.write(`<br>Age: ${obj.age}`);
+      document.write(`Name: ${name}`);
+      document.write(`<br>Age: ${age}`);
     </script>
   </body>
 </html>
